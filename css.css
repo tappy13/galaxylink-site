@@ -1,0 +1,976 @@
+/* ==========================================================================
+   GalaxyLink Computers - Enterprise Design System
+   A modern, professional stylesheet for IT solutions company
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS CUSTOM PROPERTIES (Variables)
+   Centralized color and design tokens for consistency
+   ========================================================================== */
+:root {
+  /* Primary brand colors */
+  --primary: #1E90FF;           /* Main blue - used for CTAs and accents */
+  --primary-dark: #1672CC;      /* Darker blue for hover states */
+  --primary-light: #4FA3FF;     /* Lighter blue for gradients */
+  
+  /* Neutral colors */
+  --white: #ffffff;
+  --soft-bg: #F8FAFB;          /* Light background for alternate sections */
+  
+  /* Gray scale palette */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  
+  /* Text colors */
+  --text-primary: #1F2937;      /* Main text color */
+  --text-secondary: #6B7280;    /* Secondary/muted text */
+  
+  /* Shadow system for depth */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  /* Design tokens */
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);  /* Smooth easing function */
+}
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Makes width/height calculations easier */
+}
+
+html {
+  scroll-behavior: smooth;  /* Smooth scrolling for anchor links */
+  font-size: 16px;          /* Base font size for rem calculations */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--white);
+  color: var(--text-primary);
+  line-height: 1.6;                    /* Comfortable reading line height */
+  -webkit-font-smoothing: antialiased; /* Better font rendering on Mac */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   Sticky header with backdrop blur for modern effect
+   ========================================================================== */
+header {
+  position: sticky;                /* Stays at top when scrolling */
+  top: 0;
+  background: rgba(255, 255, 255, 0.98);  /* Slightly transparent white */
+  backdrop-filter: blur(10px);     /* Blur effect for elements behind */
+  border-bottom: 1px solid var(--gray-200);
+  z-index: 1000;                   /* Ensures header stays above other content */
+  box-shadow: var(--shadow-sm);
+}
+
+/* Container - Max width wrapper for content */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navigation layout */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Company logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* ==========================================
+   LOGO IMAGE STYLING
+   For company logo image
+   ========================================== */
+.logo-image {
+  width: 50px;              /* Adjust width as needed */
+  height: 50px;             /* Adjust height as needed */
+  object-fit: contain;      /* Maintains aspect ratio */
+  display: block;
+}
+
+/* Logo icon (fallback if no image) */
+.logo-icon {
+  color: var(--primary);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+/* Navigation menu */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Navigation links */
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  position: relative;          /* For pseudo-element positioning */
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Animated underline on hover */
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;                    /* Starts at 0 width */
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease; /* Grows on hover */
+}
+
+nav a:hover::after {
+  width: 100%;                 /* Full width on hover */
+}
+
+/* Call-to-action button in navigation */
+.nav-cta {
+  background: var(--primary);
+  color: var(--white) !important;
+  padding: 0.625rem 1.5rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+/* Remove underline animation from CTA button */
+.nav-cta::after {
+  display: none;
+}
+
+/* CTA hover effect */
+.nav-cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);  /* Subtle lift effect */
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   IMAGE CAROUSEL SECTION
+   Full-width carousel showcasing IT services
+   ========================================================================== */
+.image-carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;            /* Prevents slides from extending outside */
+  background: var(--gray-900);
+}
+
+/* Container that holds all carousel slides */
+.carousel-container {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+/* Individual carousel slide */
+.carousel-slide {
+  min-width: 100%;          /* Each slide takes full width */
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for better text readability */
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+}
+
+/* Text caption on carousel slides */
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem;
+  color: white;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.carousel-caption p {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Navigation dots at bottom of carousel */
+.carousel-nav {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+/* Active dot becomes elongated pill shape */
+.carousel-dot.active {
+  background: var(--white);
+  width: 32px;
+  border-radius: 6px;
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Previous/Next arrow buttons */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-arrow.prev { left: 2rem; }
+.carousel-arrow.next { right: 2rem; }
+
+/* ==========================================================================
+   HERO SECTION
+   Main banner with gradient background
+   ========================================================================== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1E90FF 0%, #4FA3FF 100%);
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Radial gradient overlays for visual depth */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;        /* Allows clicking through the overlay */
+}
+
+/* Hero content positioning */
+.hero-content {
+  position: relative;
+  z-index: 1;                  /* Above overlay */
+  padding: 4rem 2rem;
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+/* Main hero heading */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.1;            /* Tight line height for impact */
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;     /* Slight negative spacing for modern look */
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   Reusable button components
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+/* Primary button - White on colored background */
+.btn-primary {
+  background: var(--white);
+  color: var(--primary);
+  margin-right: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);  /* Lift effect */
+  box-shadow: var(--shadow-lg);
+}
+
+/* Secondary button - Outline style */
+.btn-secondary {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   SECTION STYLES
+   Common styles for all major sections
+   ========================================================================== */
+section {
+  padding: 6rem 0;             /* Generous vertical spacing */
+}
+
+/* Section heading */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+}
+
+/* Section subtitle/description */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alternate background for visual separation */
+.alt-bg {
+  background: var(--soft-bg);
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   Grid layout with hover effects
+   ========================================================================== */
+.services-grid {
+  display: grid;
+  /* Responsive grid: minimum 280px columns, fills available space */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Individual service card */
+.service-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--gray-100);
+}
+
+/* Card hover effect */
+.service-card:hover {
+  transform: translateY(-8px);     /* Lifts up on hover */
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+
+/* Icon container with gradient background */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Service card text */
+.service-card h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--gray-900);
+}
+
+.service-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+   Two-column layout with features
+   ========================================================================== */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Equal columns */
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+/* Lead paragraph - larger, emphasized text */
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Feature items grid */
+.about-features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Individual feature item */
+.feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+/* Feature hover effect - slides right */
+.feature-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(8px);
+}
+
+/* Checkmark icon circle */
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;              /* Prevents icon from shrinking */
+}
+
+.feature-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--gray-900);
+}
+
+.feature-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   TESTIMONIALS SECTION
+   Carousel with manual and auto navigation
+   ========================================================================== */
+.testimonial-carousel {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;            /* Hides slides outside viewport */
+  position: relative;
+}
+
+/* Container for all slides */
+.testimonial-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);  /* Smooth slide transition */
+}
+
+/* Individual slide */
+.testimonial-slide {
+  min-width: 100%;             /* Each slide takes full width */
+  padding: 2rem;
+}
+
+/* Testimonial card */
+.testimonial-content {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+/* Quote text */
+.testimonial-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--gray-700);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Author information */
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testimonial-author strong {
+  font-size: 1.125rem;
+  color: var(--gray-900);
+  font-weight: 600;
+}
+
+.testimonial-author span {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Navigation dots */
+.testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+/* Individual dot */
+.testimonial-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gray-300);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Active dot - elongated pill shape */
+.testimonial-dot.active {
+  background: var(--primary);
+  width: 32px;
+  border-radius: 6px;
+}
+
+.testimonial-dot:hover {
+  background: var(--primary-light);
+}
+
+/* ==========================================================================
+   CONTACT SECTION
+   Split layout with info and form
+   ========================================================================== */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Two equal columns */
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.contact-details {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Contact detail item */
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Icon container */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-item h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--gray-900);
+}
+
+.contact-item p {
+  color: var(--text-secondary);
+}
+
+/* Contact form styling */
+.contact-form {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Form inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1.5px solid var(--gray-200);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--white);
+}
+
+/* Focus state with blue glow */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.1);  /* Blue glow */
+}
+
+.contact-form textarea {
+  resize: vertical;            /* Allows vertical resize only */
+  min-height: 120px;
+}
+
+/* Submit button */
+.contact-form button {
+  width: 100%;
+  background: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-form button:hover {
+  background: var(--primary-dark);
+}
+
+/* ==========================================================================
+   FOOTER
+   Dark gradient footer with centered content
+   ========================================================================== */
+footer {
+  background: linear-gradient(135deg, #0a2540 0%, #1a3a5a 100%);
+  color: var(--white);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Footer logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-logo .logo-icon {
+  color: var(--primary-light);
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   Media queries for tablet and mobile devices
+   ========================================================================== */
+
+/* Tablet and smaller (below 968px) */
+@media (max-width: 968px) {
+  /* Stack navigation vertically */
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Reduce hero text size */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  /* Stack two-column layouts */
+  .about-content,
+  .contact-wrapper {
+    grid-template-columns: 1fr;  /* Single column */
+    gap: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Single column services grid */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Carousel adjustments */
+  .image-carousel {
+    height: 400px;
+  }
+
+  .carousel-caption h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-arrow.prev {
+    left: 1rem;
+  }
+
+  .carousel-arrow.next {
+    right: 1rem;
+  }
+
+  /* Logo adjustments */
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile (below 640px) */
+@media (max-width: 640px) {
+  /* Reduce container padding */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Reduce section padding */
+  section {
+    padding: 4rem 0;
+  }
+
+  /* Further reduce hero text */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Stack buttons vertically */
+  .btn {
+    display: block;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  /* Reduce testimonial padding */
+  .testimonial-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.125rem;
+  }
+
+  /* Carousel adjustments */
+  .image-carousel {
+    height: 350px;
+  }
+
+  .carousel-caption {
+    padding: 2rem 1.5rem;
+  }
+
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Hide carousel arrows on mobile */
+  .carousel-arrow {
+    display: none;
+  }
+
+  /* Logo adjustments */
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}

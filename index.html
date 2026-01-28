@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GalaxyLink Computers | Enterprise IT Solutions in Kenya</title>
+  
+  <!-- Google Fonts - Inter for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css.css" />
+</head>
+<body>
+
+<!-- ========================================================================== 
+     HEADER & NAVIGATION
+     Sticky header with logo and navigation menu
+     ========================================================================== -->
+<header>
+  <div class="container nav">
+    <!-- ==========================================
+         COMPANY LOGO SECTION
+         
+         TO INSERT YOUR LOGO:
+         1. Uncomment the <img> tag below
+         2. Replace "your-logo.png" with your actual logo filename
+         3. Upload your logo to the same directory as this HTML file
+         4. Adjust width/height in CSS (.logo-image) as needed
+         5. Comment out or delete the .logo-icon span if using image
+         
+         Logo recommendations:
+         - PNG format with transparent background
+         - SVG format for best scaling
+         - Optimal size: 150-200px width
+         - Keep aspect ratio
+         ========================================== -->
+    <div class="logo">
+      <!-- OPTION 1: Use an image logo (RECOMMENDED) -->
+      <!-- <img src="your-logo.png" alt="GalaxyLink Computers Logo" class="logo-image"> -->
+      
+      <!-- OPTION 2: Use icon placeholder (current) -->
+      <span class="logo-icon">◆</span>
+      
+      <!-- Company name text (always visible) -->
+      <span class="logo-text">GalaxyLink Computers</span>
+    </div>
+    
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========================================================================== 
+     IMAGE CAROUSEL SECTION
+     Showcases 6 key IT service areas with auto-rotating slides
+     ========================================================================== -->
+<div class="image-carousel">
+  <!-- Container that slides horizontally -->
+  <div class="carousel-container">
+    
+    <!-- Slide 1: Enterprise IT Solutions -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>Enterprise IT Solutions</h2>
+        <p>Powering businesses with cutting-edge technology infrastructure</p>
+      </div>
+    </div>
+    
+    <!-- Slide 2: Network Infrastructure -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>Network Infrastructure</h2>
+        <p>Secure, scalable networking solutions for modern enterprises</p>
+      </div>
+    </div>
+    
+    <!-- Slide 3: Expert IT Support -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>Expert IT Support</h2>
+        <p>24/7 technical support and maintenance services</p>
+      </div>
+    </div>
+    
+    <!-- Slide 4: Data Center Solutions -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>Data Center Solutions</h2>
+        <p>Robust server infrastructure and cloud integration</p>
+      </div>
+    </div>
+    
+    <!-- Slide 5: Professional Team -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>Professional Team</h2>
+        <p>Certified experts delivering excellence in IT services</p>
+      </div>
+    </div>
+    
+    <!-- Slide 6: CCTV & Security Systems -->
+    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80');">
+      <div class="carousel-caption">
+        <h2>CCTV & Security Systems</h2>
+        <p>Advanced surveillance and security solutions to protect your business</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Previous/Next navigation arrows -->
+  <button class="carousel-arrow prev" onclick="moveCarousel(-1)">‹</button>
+  <button class="carousel-arrow next" onclick="moveCarousel(1)">›</button>
+
+  <!-- Dot navigation indicators -->
+  <div class="carousel-nav">
+    <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+    <span class="carousel-dot" onclick="goToSlide(1)"></span>
+    <span class="carousel-dot" onclick="goToSlide(2)"></span>
+    <span class="carousel-dot" onclick="goToSlide(3)"></span>
+    <span class="carousel-dot" onclick="goToSlide(4)"></span>
+    <span class="carousel-dot" onclick="goToSlide(5)"></span>
+  </div>
+</div>
+
+<!-- ========================================================================== 
+     HERO SECTION
+     Main value proposition with dual CTAs
+     ========================================================================== -->
+<section id="home" class="hero">
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1>Connecting You to Smarter IT Solutions</h1>
+      <p class="hero-subtitle">Reliable, secure, and scalable IT infrastructure for modern businesses across Kenya</p>
+      <a href="#contact" class="btn btn-primary">Contact Us</a>
+      <a href="#services" class="btn btn-secondary">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================== 
+     SERVICES SECTION
+     Grid showcasing 4 main service categories
+     ========================================================================== -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Comprehensive IT solutions tailored to your business needs</p>
+    
+    <div class="services-grid">
+      
+      <!-- Service 1: Devices & Components -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h3>Devices & Components</h3>
+        <p>Premium computers, networking hardware, and consumables from leading manufacturers</p>
+      </div>
+      
+      <!-- Service 2: Network Design & Setup -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+        <h3>Network Design & Setup</h3>
+        <p>Secure, scalable network infrastructure designed for optimal performance</p>
+      </div>
+      
+      <!-- Service 3: IT Infrastructure -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+        </div>
+        <h3>IT Infrastructure</h3>
+        <p>Complete infrastructure implementation from servers to cloud integration</p>
+      </div>
+      
+      <!-- Service 4: Maintenance & Support -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <h3>Maintenance & Support</h3>
+        <p>24/7 monitoring, maintenance, and expert technical support for your systems</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================== 
+     ABOUT SECTION
+     Company information and key features
+     ========================================================================== -->
+<section id="about" class="alt-bg">
+  <div class="container">
+    <div class="about-content">
+      
+      <!-- Left column: About text -->
+      <div class="about-text">
+        <h2>Why GalaxyLink Computers?</h2>
+        <p class="lead">We deliver enterprise-grade IT solutions that drive business growth and operational excellence across Kenya.</p>
+        <p>With years of experience serving businesses of all sizes, we understand the critical role technology plays in your success. Our team of certified professionals ensures your IT infrastructure is robust, secure, and scalable.</p>
+      </div>
+      
+      <!-- Right column: Feature highlights -->
+      <div class="about-features">
+        
+        <!-- Feature 1: Optimized Systems -->
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
+          <div>
+            <h4>Optimized Systems</h4>
+            <p>Peak performance infrastructure</p>
+          </div>
+        </div>
+        
+        <!-- Feature 2: Client-First Approach -->
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
+          <div>
+            <h4>Client-First Approach</h4>
+            <p>Tailored solutions for your needs</p>
+          </div>
+        </div>
+        
+        <!-- Feature 3: Expert Support -->
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
+          <div>
+            <h4>Expert Support</h4>
+            <p>Certified IT professionals</p>
+          </div>
+        </div>
+        
+        <!-- Feature 4: Global Standards -->
+        <div class="feature-item">
+          <div class="feature-icon">✓</div>
+          <div>
+            <h4>Global Standards</h4>
+            <p>International best practices</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================== 
+     TESTIMONIALS SECTION
+     Client testimonials carousel
+     ========================================================================== -->
+<section id="testimonials">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-subtitle">Trusted by businesses across Kenya</p>
+    
+    <!-- Carousel container -->
+    <div class="testimonial-carousel">
+      <!-- Sliding track for testimonials -->
+      <div class="testimonial-track">
+        
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"GalaxyLink transformed our IT infrastructure. Their expertise and professionalism are unmatched."</p>
+            <div class="testimonial-author">
+              <strong>Sarah Mwangi</strong>
+              <span>IT Director, Manufacturing Sector</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"Fast, reliable support whenever we need it. They've become an essential partner to our operations."</p>
+            <div class="testimonial-author">
+              <strong>James Ochieng</strong>
+              <span>CEO, Logistics Company</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"Highly recommended for any business seeking professional IT solutions. Outstanding service quality."</p>
+            <div class="testimonial-author">
+              <strong>Patricia Kamau</strong>
+              <span>Operations Manager, Financial Services</span>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Navigation dots for testimonials -->
+      <div class="testimonial-dots">
+        <span class="testimonial-dot active" data-index="0"></span>
+        <span class="testimonial-dot" data-index="1"></span>
+        <span class="testimonial-dot" data-index="2"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================== 
+     CONTACT SECTION
+     Contact information and form
+     ========================================================================== -->
+<section id="contact" class="alt-bg">
+  <div class="container">
+    <div class="contact-wrapper">
+      
+      <!-- Left column: Contact information -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p class="lead">Ready to transform your IT infrastructure? Let's discuss your needs.</p>
+        
+        <div class="contact-details">
+          
+          <!-- Location information -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- Location pin SVG icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Nairobi, Kenya</p>
+            </div>
+          </div>
+          
+          <!-- Email information -->
+          <div class="contact-item">
+            <div class="contact-icon">
+              <!-- Email envelope SVG icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>info@galaxylink.co.ke</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- Right column: Contact form -->
+      <form class="contact-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Tell us about your IT needs" rows="5"></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================================== 
+     FOOTER
+     Company information and copyright
+     ========================================================================== -->
+<footer>
+  <div class="container footer-content">
+    <!-- Footer logo -->
+    <div class="footer-logo">
+      <span class="logo-icon">◆</span>
+      <span>GalaxyLink Computers</span>
+    </div>
+    
+    <!-- Copyright and tagline -->
+    <p>© 2026 GalaxyLink Computers. All rights reserved.</p>
+    <p class="footer-tagline">Connecting Kenya to smarter IT solutions</p>
+  </div>
+</footer>
+
+<!-- JavaScript functionality -->
+<script src="js.js"></script>
+</body>
+</html>
