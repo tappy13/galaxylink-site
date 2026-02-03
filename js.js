@@ -1,153 +1,80 @@
 // =============================================================================
 // GalaxyLink Computers - Enhanced Interactions
-// JavaScript for carousels, forms, animations, and scroll effects
+// JavaScript for carousel, forms, animations, and scroll effects
 // =============================================================================
-
-// =============================================================================
-// IMAGE CAROUSEL FUNCTIONALITY
-// Auto-rotating carousel with manual navigation via dots and arrows
-// =============================================================================
-
-let currentSlide = 0;          // Current slide index (0-5)
-const totalSlides = 6;         // Total number of slides
-let autoplayInterval;          // Stores interval ID for auto-play
-
-/**
- * Updates carousel position and active dot indicator
- */
-function updateCarousel() {
-  const container = document.querySelector('.carousel-container');
-  const dots = document.querySelectorAll('.carousel-dot');
-  
-  // Slide the container horizontally
-  // Each slide is 100% wide, so multiply by 100 to get percentage offset
-  container.style.transform = `translateX(-${currentSlide * 100}%)`;
-  
-  // Update active dot
-  dots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentSlide);
-  });
-}
-
-/**
- * Moves carousel by direction (-1 for previous, 1 for next)
- * @param {number} direction - Direction to move (-1 or 1)
- */
-function moveCarousel(direction) {
-  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-  updateCarousel();
-  resetAutoplay();
-}
-
-/**
- * Jumps to specific slide
- * @param {number} index - Slide index to jump to (0-5)
- */
-function goToSlide(index) {
-  currentSlide = index;
-  updateCarousel();
-  resetAutoplay();
-}
-
-/**
- * Auto-advances to next slide
- */
-function autoplay() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  updateCarousel();
-}
-
-/**
- * Starts automatic carousel rotation
- * Rotates every 5 seconds
- */
-function startAutoplay() {
-  autoplayInterval = setInterval(autoplay, 5000);
-}
-
-/**
- * Resets autoplay timer
- * Called when user manually navigates
- */
-function resetAutoplay() {
-  clearInterval(autoplayInterval);
-  startAutoplay();
-}
-
-// Initialize carousel on page load
-startAutoplay();
-
-// Pause carousel when mouse hovers over it
-const carousel = document.querySelector('.image-carousel');
-carousel.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
-carousel.addEventListener('mouseleave', startAutoplay);
 
 // =============================================================================
 // TESTIMONIAL CAROUSEL
-// Auto-rotating testimonial carousel with manual navigation via dots
+// Auto-rotating carousel with manual navigation via dots
 // =============================================================================
 
-const testimonialTrack = document.querySelector('.testimonial-track');
-const testimonialDots = document.querySelectorAll('.testimonial-dot');
-let testimonialIndex = 0;
-const testimonialCount = 3;
-let testimonialAutoplayInterval;
+const track = document.querySelector('.carousel-track');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;           // Currently displayed slide (0-2)
+const slideCount = 3;           // Total number of testimonial slides
+let autoplayInterval;           // Stores the interval ID for autoplay
 
 /**
- * Updates testimonial carousel position and active dot
+ * Updates the carousel to show a specific slide
+ * @param {number} index - Index of slide to display (0-2)
  */
-function updateTestimonialCarousel() {
-  testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+function updateCarousel(index) {
+  currentIndex = index;
   
-  // Update active dot
-  testimonialDots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === testimonialIndex);
+  // Move the track horizontally to show selected slide
+  // Each slide is 100% wide, so multiply by 100 to get percentage offset
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  
+  // Update navigation dots to show which slide is active
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
   });
 }
 
 /**
- * Advances to next testimonial
+ * Advances to the next slide (wraps around to first after last)
  */
-function nextTestimonial() {
-  testimonialIndex = (testimonialIndex + 1) % testimonialCount;
-  updateTestimonialCarousel();
+function nextSlide() {
+  const nextIndex = (currentIndex + 1) % slideCount;  // Modulo for wrapping
+  updateCarousel(nextIndex);
 }
 
 /**
- * Starts testimonial autoplay
+ * Starts automatic slide rotation
+ * Advances every 5 seconds
  */
-function startTestimonialAutoplay() {
-  testimonialAutoplayInterval = setInterval(nextTestimonial, 5000);
+function startAutoplay() {
+  autoplayInterval = setInterval(nextSlide, 5000);
 }
 
 /**
- * Resets testimonial autoplay
+ * Stops automatic slide rotation
+ * Used when user interacts with carousel
  */
-function resetTestimonialAutoplay() {
-  clearInterval(testimonialAutoplayInterval);
-  startTestimonialAutoplay();
+function stopAutoplay() {
+  clearInterval(autoplayInterval);
 }
 
-// Add click handlers to testimonial dots
-testimonialDots.forEach((dot, index) => {
+// Add click handlers to navigation dots
+dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    testimonialIndex = index;
-    updateTestimonialCarousel();
-    resetTestimonialAutoplay();
+    stopAutoplay();              // Pause autoplay when user clicks
+    updateCarousel(index);       // Jump to selected slide
+    startAutoplay();             // Resume autoplay after manual navigation
   });
 });
 
-// Start testimonial autoplay
-startTestimonialAutoplay();
+// Start the carousel autoplay on page load
+startAutoplay();
 
-// Pause testimonial carousel on hover
-const testimonialCarousel = document.querySelector('.testimonial-carousel');
-testimonialCarousel.addEventListener('mouseenter', () => clearInterval(testimonialAutoplayInterval));
-testimonialCarousel.addEventListener('mouseleave', startTestimonialAutoplay);
+// Pause carousel when mouse hovers over it (improves UX)
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseenter', stopAutoplay);
+carousel.addEventListener('mouseleave', startAutoplay);
 
 // =============================================================================
-// SMOOTH SCROLLING FOR ANCHOR LINKS
-// Improves navigation with offset for sticky header
+// SMOOTH SCROLL ENHANCEMENT
+// Improves anchor link navigation with offset for sticky header
 // =============================================================================
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
