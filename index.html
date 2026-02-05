@@ -3,174 +3,318 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GalaxyLink Computers | Enterprise IT Solutions in Kenya</title>
+  <title>Galaxy Link Computers | Kenya's Premier IT Solutions & Products Store</title>
   
-  <!-- Google Fonts - Inter for modern typography -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sevillana:wght@400&display=swap" rel="stylesheet">
   
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="css.css" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ========================================================================== 
-     HEADER & NAVIGATION
-     Sticky header with logo and navigation menu
-     ========================================================================== -->
+<!-- HEADER & NAVIGATION -->
 <header>
   <div class="container nav">
-    <!-- ==========================================
-         COMPANY LOGO SECTION
-         
-         TO INSERT YOUR LOGO:
-         1. Uncomment the <img> tag below
-         2. Replace "your-logo.png" with your actual logo filename
-         3. Upload your logo to the same directory as this HTML file
-         4. Adjust width/height in CSS (.logo-image) as needed
-         5. Comment out or delete the .logo-icon span if using image
-         
-         Logo recommendations:
-         - PNG format with transparent background
-         - SVG format for best scaling
-         - Optimal size: 150-200px width
-         - Keep aspect ratio
-         ========================================== -->
     <div class="logo">
-      <!-- OPTION 1: Use an image logo (RECOMMENDED) -->
-      <!-- <img src="your-logo.png" alt="GalaxyLink Computers Logo" class="logo-image"> -->
-      
-      <!-- OPTION 2: Use icon placeholder (current) -->
+      <!-- TO INSERT YOUR LOGO: Uncomment line below and replace "your-logo.png" -->
+      <!-- <img src="your-logo.png" alt="Galaxy Link Computers Logo" class="logo-image"> -->
       <span class="logo-icon">◆</span>
-      
-      <!-- Company name text (always visible) -->
-      <span class="logo-text">GalaxyLink Computers</span>
+      <span class="logo-text">Galaxy Link Computers</span>
     </div>
     
-    <!-- Navigation Menu -->
     <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="#products" class="dropbtn">Products ▾</a>
+        <div class="dropdown-content">
+          <a href="laptops-desktops.html">Laptops & Desktops</a>
+          <a href="servers-storage.html">Servers & Storage</a>
+          <a href="printers-copiers.html">Printers & Copiers</a>
+          <a href="networking.html">Networking Equipment</a>
+          <a href="cctv-security.html">CCTV & Security</a>
+          <a href="accessories.html">Accessories & Parts</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#services" class="dropbtn">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="backup-cloud.html">Backup & Cloud Storage</a>
+          <a href="internet-management.html">Internet Management</a>
+          <a href="pos-pms.html">POS & PMS Software</a>
+          <a href="access-control.html">Access Control & Attendance</a>
+        </div>
+      </div>
+      <a href="#brands">Brands</a>
       <a href="#about">About</a>
       <a href="#contact" class="nav-cta">Contact Us</a>
     </nav>
   </div>
 </header>
 
-<!-- ========================================================================== 
-     IMAGE CAROUSEL SECTION
-     Showcases 6 key IT service areas with auto-rotating slides
-     ========================================================================== -->
-<div class="image-carousel">
-  <!-- Container that slides horizontally -->
-  <div class="carousel-container">
+<!-- HERO BANNER CAROUSEL -->
+<div class="hero-carousel">
+  <div class="hero-carousel-container">
     
-    <!-- Slide 1: Enterprise IT Solutions -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>Enterprise IT Solutions</h2>
-        <p>Powering businesses with cutting-edge technology infrastructure</p>
+    <div class="hero-slide" style="background: linear-gradient(135deg, #1E90FF 0%, #4FA3FF 100%);">
+      <div class="container hero-slide-content">
+        <div class="hero-text">
+          <h1>Kenya's Premier IT Solutions Provider</h1>
+          <p>Computers, Laptops, Networking, CCTV & More</p>
+          <a href="#products" class="btn btn-hero">Shop Now</a>
+        </div>
       </div>
     </div>
     
-    <!-- Slide 2: Network Infrastructure -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>Network Infrastructure</h2>
-        <p>Secure, scalable networking solutions for modern enterprises</p>
+    <div class="hero-slide" style="background: linear-gradient(135deg, #0B2D52 0%, #1E5A8E 100%);">
+      <div class="container hero-slide-content">
+        <div class="hero-text">
+          <h1>Enterprise Networking Solutions</h1>
+          <p>Secure & Scalable Network Infrastructure</p>
+          <a href="#services" class="btn btn-hero">Learn More</a>
+        </div>
       </div>
     </div>
     
-    <!-- Slide 3: Expert IT Support -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>Expert IT Support</h2>
-        <p>24/7 technical support and maintenance services</p>
-      </div>
-    </div>
-    
-    <!-- Slide 4: Data Center Solutions -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>Data Center Solutions</h2>
-        <p>Robust server infrastructure and cloud integration</p>
-      </div>
-    </div>
-    
-    <!-- Slide 5: Professional Team -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>Professional Team</h2>
-        <p>Certified experts delivering excellence in IT services</p>
-      </div>
-    </div>
-    
-    <!-- Slide 6: CCTV & Security Systems -->
-    <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=80');">
-      <div class="carousel-caption">
-        <h2>CCTV & Security Systems</h2>
-        <p>Advanced surveillance and security solutions to protect your business</p>
+    <div class="hero-slide" style="background: linear-gradient(135deg, #1565C0 0%, #42A5F5 100%);">
+      <div class="container hero-slide-content">
+        <div class="hero-text">
+          <h1>CCTV & Security Systems</h1>
+          <p>Advanced Surveillance for Your Business</p>
+          <a href="#contact" class="btn btn-hero">Get Quote</a>
+        </div>
       </div>
     </div>
     
   </div>
-
-  <!-- Previous/Next navigation arrows -->
-  <button class="carousel-arrow prev" onclick="moveCarousel(-1)">‹</button>
-  <button class="carousel-arrow next" onclick="moveCarousel(1)">›</button>
-
-  <!-- Dot navigation indicators -->
-  <div class="carousel-nav">
-    <span class="carousel-dot active" onclick="goToSlide(0)"></span>
-    <span class="carousel-dot" onclick="goToSlide(1)"></span>
-    <span class="carousel-dot" onclick="goToSlide(2)"></span>
-    <span class="carousel-dot" onclick="goToSlide(3)"></span>
-    <span class="carousel-dot" onclick="goToSlide(4)"></span>
-    <span class="carousel-dot" onclick="goToSlide(5)"></span>
+  
+  <button class="hero-arrow prev" onclick="moveHeroSlide(-1)">‹</button>
+  <button class="hero-arrow next" onclick="moveHeroSlide(1)">›</button>
+  
+  <div class="hero-dots">
+    <span class="hero-dot active" onclick="goToHeroSlide(0)"></span>
+    <span class="hero-dot" onclick="goToHeroSlide(1)"></span>
+    <span class="hero-dot" onclick="goToHeroSlide(2)"></span>
   </div>
 </div>
 
-<!-- ========================================================================== 
-     HERO SECTION
-     Main value proposition with dual CTAs
-     ========================================================================== -->
-<section id="home" class="hero">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <h1>Connecting You to Smarter IT Solutions</h1>
-      <p class="hero-subtitle">Reliable, secure, and scalable IT infrastructure for modern businesses across Kenya</p>
-      <a href="#contact" class="btn btn-primary">Contact Us</a>
-      <a href="#services" class="btn btn-secondary">Explore Services</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================================================== 
-     SERVICES SECTION
-     Grid showcasing 4 main service categories
-     ========================================================================== -->
-<section id="services">
+<!-- PRODUCT CATEGORIES SECTION -->
+<section id="products" class="product-categories">
   <div class="container">
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-subtitle">Comprehensive IT solutions tailored to your business needs</p>
+    <h2 class="section-title">Shop By Category</h2>
+    <p class="section-subtitle">Browse our comprehensive range of IT products and solutions</p>
     
-    <div class="services-grid">
+    <div class="categories-grid">
       
-      <!-- Service 1: Devices & Components -->
-      <div class="service-card">
-        <div class="service-icon">
+      <div class="category-card">
+        <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <line x1="8" y1="21" x2="16" y2="21"></line>
             <line x1="12" y1="17" x2="12" y2="21"></line>
           </svg>
         </div>
-        <h3>Devices & Components</h3>
-        <p>Premium computers, networking hardware, and consumables from leading manufacturers</p>
+        <h3>Laptops & Desktops</h3>
+        <p>Business & Personal Computers</p>
       </div>
       
-      <!-- Service 2: Network Design & Setup -->
+      <div class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+        </div>
+        <h3>Servers & Storage</h3>
+        <p>Enterprise Infrastructure</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+        </div>
+        <h3>Printers & Copiers</h3>
+        <p>Office Printing Solutions</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+        </div>
+        <h3>Networking Equipment</h3>
+        <p>Routers, Switches & Access Points</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <h3>CCTV & Security</h3>
+        <p>Surveillance Systems</p>
+      </div>
+      
+      <div class="category-card">
+        <div class="category-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+        </div>
+        <h3>Accessories & Parts</h3>
+        <p>Cables, Adapters & Components</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PRODUCTS SECTION -->
+<section class="featured-products alt-bg">
+  <div class="container">
+    <h2 class="section-title">Featured Products</h2>
+    <p class="section-subtitle">Top picks for your business and personal computing needs</p>
+    
+    <div class="products-grid">
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Business Laptop">
+          <div class="product-badge">Popular</div>
+        </div>
+        <div class="product-info">
+          <h3>Dell Latitude 5420</h3>
+          <p>Intel Core i5, 8GB RAM, 256GB SSD</p>
+          <ul class="product-specs">
+            <li>14" FHD Display</li>
+            <li>Windows 11 Pro</li>
+            <li>WiFi 6 & Bluetooth 5.1</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&q=80" alt="Desktop Computer">
+        </div>
+        <div class="product-info">
+          <h3>HP ProDesk 600 G6</h3>
+          <p>Intel Core i7, 16GB RAM, 512GB SSD</p>
+          <ul class="product-specs">
+            <li>Small Form Factor</li>
+            <li>Windows 11 Pro</li>
+            <li>Multiple Display Support</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Office Printer">
+        </div>
+        <div class="product-info">
+          <h3>Canon imageRUNNER</h3>
+          <p>Multifunction Copier/Printer</p>
+          <ul class="product-specs">
+            <li>Print, Copy, Scan, Fax</li>
+            <li>35 pages per minute</li>
+            <li>Network Ready</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Network Switch">
+          <div class="product-badge">Enterprise</div>
+        </div>
+        <div class="product-info">
+          <h3>Cisco Catalyst 2960</h3>
+          <p>48-Port Managed Switch</p>
+          <ul class="product-specs">
+            <li>Gigabit Ethernet</li>
+            <li>Layer 2 Switching</li>
+            <li>PoE+ Support</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="CCTV Camera">
+        </div>
+        <div class="product-info">
+          <h3>Hikvision IP Camera</h3>
+          <p>4MP Outdoor Security Camera</p>
+          <ul class="product-specs">
+            <li>Night Vision IR</li>
+            <li>Weather Resistant</li>
+            <li>Mobile App Access</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="UPS System">
+        </div>
+        <div class="product-info">
+          <h3>APC Smart-UPS</h3>
+          <p>1500VA Backup Power</p>
+          <ul class="product-specs">
+            <li>LCD Display</li>
+            <li>8 Outlets</li>
+            <li>USB Management</li>
+          </ul>
+          <button class="btn btn-product">Request Quote</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Comprehensive IT solutions for your business</p>
+    
+    <div class="services-grid">
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <h3>IT Consultation</h3>
+        <p>Expert advice on technology strategy, infrastructure planning, and digital transformation</p>
+      </div>
+      
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -180,236 +324,250 @@
           </svg>
         </div>
         <h3>Network Design & Setup</h3>
-        <p>Secure, scalable network infrastructure designed for optimal performance</p>
+        <p>Custom network architecture, installation, and configuration for optimal performance</p>
       </div>
       
-      <!-- Service 3: IT Infrastructure -->
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-            <line x1="6" y1="6" x2="6.01" y2="6"></line>
-            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
           </svg>
         </div>
-        <h3>IT Infrastructure</h3>
-        <p>Complete infrastructure implementation from servers to cloud integration</p>
+        <h3>Maintenance & Support</h3>
+        <p>24/7 technical support, system maintenance, and rapid response repair services</p>
       </div>
       
-      <!-- Service 4: Maintenance & Support -->
       <div class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           </svg>
         </div>
-        <h3>Maintenance & Support</h3>
-        <p>24/7 monitoring, maintenance, and expert technical support for your systems</p>
+        <h3>Cybersecurity</h3>
+        <p>Comprehensive security solutions including firewalls, antivirus, and data protection</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <h3>CCTV Installation</h3>
+        <p>Professional surveillance system design, installation, and monitoring setup</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <h3>Cloud Solutions</h3>
+        <p>Cloud migration, hosting, and management services for scalable infrastructure</p>
       </div>
       
     </div>
   </div>
 </section>
 
-<!-- ========================================================================== 
-     ABOUT SECTION
-     Company information and key features
-     ========================================================================== -->
-<section id="about" class="alt-bg">
+<!-- BRANDS SECTION -->
+<section id="brands" class="brands-section alt-bg">
   <div class="container">
-    <div class="about-content">
-      
-      <!-- Left column: About text -->
-      <div class="about-text">
-        <h2>Why GalaxyLink Computers?</h2>
-        <p class="lead">We deliver enterprise-grade IT solutions that drive business growth and operational excellence across Kenya.</p>
-        <p>With years of experience serving businesses of all sizes, we understand the critical role technology plays in your success. Our team of certified professionals ensures your IT infrastructure is robust, secure, and scalable.</p>
-      </div>
-      
-      <!-- Right column: Feature highlights -->
-      <div class="about-features">
-        
-        <!-- Feature 1: Optimized Systems -->
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div>
-            <h4>Optimized Systems</h4>
-            <p>Peak performance infrastructure</p>
-          </div>
-        </div>
-        
-        <!-- Feature 2: Client-First Approach -->
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div>
-            <h4>Client-First Approach</h4>
-            <p>Tailored solutions for your needs</p>
-          </div>
-        </div>
-        
-        <!-- Feature 3: Expert Support -->
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div>
-            <h4>Expert Support</h4>
-            <p>Certified IT professionals</p>
-          </div>
-        </div>
-        
-        <!-- Feature 4: Global Standards -->
-        <div class="feature-item">
-          <div class="feature-icon">✓</div>
-          <div>
-            <h4>Global Standards</h4>
-            <p>International best practices</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================================================== 
-     TESTIMONIALS SECTION
-     Client testimonials carousel
-     ========================================================================== -->
-<section id="testimonials">
-  <div class="container">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <p class="section-subtitle">Trusted by businesses across Kenya</p>
+    <h2 class="section-title">Trusted Brands We Carry</h2>
+    <p class="section-subtitle">Partnering with world-leading technology manufacturers</p>
     
-    <!-- Carousel container -->
-    <div class="testimonial-carousel">
-      <!-- Sliding track for testimonials -->
-      <div class="testimonial-track">
-        
-        <!-- Testimonial 1 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-content">
-            <p class="testimonial-text">"GalaxyLink transformed our IT infrastructure. Their expertise and professionalism are unmatched."</p>
-            <div class="testimonial-author">
-              <strong>Sarah Mwangi</strong>
-              <span>IT Director, Manufacturing Sector</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Testimonial 2 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-content">
-            <p class="testimonial-text">"Fast, reliable support whenever we need it. They've become an essential partner to our operations."</p>
-            <div class="testimonial-author">
-              <strong>James Ochieng</strong>
-              <span>CEO, Logistics Company</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Testimonial 3 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-content">
-            <p class="testimonial-text">"Highly recommended for any business seeking professional IT solutions. Outstanding service quality."</p>
-            <div class="testimonial-author">
-              <strong>Patricia Kamau</strong>
-              <span>Operations Manager, Financial Services</span>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- Navigation dots for testimonials -->
-      <div class="testimonial-dots">
-        <span class="testimonial-dot active" data-index="0"></span>
-        <span class="testimonial-dot" data-index="1"></span>
-        <span class="testimonial-dot" data-index="2"></span>
-      </div>
+    <div class="brands-grid">
+      <div class="brand-item">Dell</div>
+      <div class="brand-item">HP</div>
+      <div class="brand-item">Lenovo</div>
+      <div class="brand-item">Cisco</div>
+      <div class="brand-item">Canon</div>
+      <div class="brand-item">Epson</div>
+      <div class="brand-item">Hikvision</div>
+      <div class="brand-item">TP-Link</div>
+      <div class="brand-item">Microsoft</div>
+      <div class="brand-item">APC</div>
+      <div class="brand-item">Ubiquiti</div>
+      <div class="brand-item">Samsung</div>
     </div>
   </div>
 </section>
 
-<!-- ========================================================================== 
-     CONTACT SECTION
-     Contact information and form
-     ========================================================================== -->
+<!-- WHY CHOOSE US SECTION -->
+<section id="about" class="why-choose">
+  <div class="container">
+    <h2 class="section-title">Why Choose Galaxy Link Computers?</h2>
+    <p class="section-subtitle">Your trusted IT partner in Kenya</p>
+    
+    <div class="features-grid">
+      
+      <div class="feature-box">
+        <div class="feature-number">01</div>
+        <h3>Wide Product Range</h3>
+        <p>Extensive inventory of computers, laptops, networking equipment, CCTV systems, and accessories from top brands</p>
+      </div>
+      
+      <div class="feature-box">
+        <div class="feature-number">02</div>
+        <h3>Competitive Pricing</h3>
+        <p>Best value for money with flexible payment options and bulk purchase discounts for businesses</p>
+      </div>
+      
+      <div class="feature-box">
+        <div class="feature-number">03</div>
+        <h3>Expert Support</h3>
+        <p>Certified IT professionals providing 24/7 technical support, maintenance, and consultation services</p>
+      </div>
+      
+      <div class="feature-box">
+        <div class="feature-number">04</div>
+        <h3>Fast Delivery</h3>
+        <p>Quick delivery anywhere in Kenya with professional installation and setup services available</p>
+      </div>
+      
+      <div class="feature-box">
+        <div class="feature-number">05</div>
+        <h3>Warranty & Service</h3>
+        <p>Comprehensive warranty coverage and after-sales support for all products and installations</p>
+      </div>
+      
+      <div class="feature-box">
+        <div class="feature-number">06</div>
+        <h3>Custom Solutions</h3>
+        <p>Tailored IT solutions designed to meet your specific business requirements and budget</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
 <section id="contact" class="alt-bg">
   <div class="container">
     <div class="contact-wrapper">
       
-      <!-- Left column: Contact information -->
       <div class="contact-info">
         <h2>Get in Touch</h2>
-        <p class="lead">Ready to transform your IT infrastructure? Let's discuss your needs.</p>
+        <p class="lead">Ready to upgrade your IT infrastructure? Contact us for quotes, consultations, or product inquiries.</p>
         
         <div class="contact-details">
           
-          <!-- Location information -->
           <div class="contact-item">
             <div class="contact-icon">
-              <!-- Location pin SVG icon -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
             </div>
             <div>
-              <h4>Location</h4>
-              <p>Nairobi, Kenya</p>
+              <h4>Visit Our Store</h4>
+              <p>Nairobi CBD, Kenya</p>
             </div>
           </div>
           
-          <!-- Email information -->
           <div class="contact-item">
             <div class="contact-icon">
-              <!-- Email envelope SVG icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Call Us</h4>
+              <p>+254 700 000 000</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </div>
             <div>
-              <h4>Email</h4>
-              <p>info@galaxylink.co.ke</p>
+              <h4>Email Us</h4>
+              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58c8b838aa5828489849d9c898c8b8ecb868acb8e80">[email&#160;protected]</a></p>
             </div>
           </div>
           
         </div>
       </div>
       
-      <!-- Right column: Contact form -->
       <form class="contact-form">
+        <h3>Request a Quote</h3>
         <input type="text" placeholder="Full Name" required>
         <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Phone Number">
-        <textarea placeholder="Tell us about your IT needs" rows="5"></textarea>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <input type="tel" placeholder="Phone Number" required>
+        <select required>
+          <option value="">Select Product/Service</option>
+          <option value="laptops">Laptops & Desktops</option>
+          <option value="servers">Servers & Storage</option>
+          <option value="printers">Printers & Copiers</option>
+          <option value="networking">Networking Equipment</option>
+          <option value="cctv">CCTV & Security</option>
+          <option value="services">IT Services</option>
+        </select>
+        <textarea placeholder="Tell us about your requirements" rows="4"></textarea>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
       </form>
       
     </div>
   </div>
 </section>
 
-<!-- ========================================================================== 
-     FOOTER
-     Company information and copyright
-     ========================================================================== -->
+<!-- FOOTER -->
 <footer>
   <div class="container footer-content">
-    <!-- Footer logo -->
-    <div class="footer-logo">
-      <span class="logo-icon">◆</span>
-      <span>GalaxyLink Computers</span>
+    <div class="footer-columns">
+      
+      <div class="footer-col">
+        <div class="footer-logo">
+          <span class="logo-icon">◆</span>
+          <span>Galaxy Link Computers</span>
+        </div>
+        <p>Kenya's premier supplier of computers, laptops, networking equipment, CCTV systems, and IT solutions.</p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="laptops-desktops.html">Laptops & Desktops</a></li>
+          <li><a href="networking.html">Networking Equipment</a></li>
+          <li><a href="cctv-security.html">CCTV & Security</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Nairobi CBD, Kenya</li>
+          <li>+254 700 000 000</li>
+          <li>info@galaxylink.co.ke</li>
+        </ul>
+      </div>
     </div>
-    
-    <!-- Copyright and tagline -->
-    <p>© 2026 GalaxyLink Computers. All rights reserved.</p>
-    <p class="footer-tagline">Connecting Kenya to smarter IT solutions</p>
+    <div class="footer-bottom">
+      <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
+      <p>Connecting Kenya to smarter IT solutions</p>
+    </div>
   </div>
 </footer>
 
-<!-- JavaScript functionality -->
-<script src="js.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

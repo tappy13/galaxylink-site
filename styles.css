@@ -1,7 +1,4 @@
-/* ==========================================================================
-   GalaxyLink Computers - Clean & Honest Design System
-   Simplified, straightforward styling without overselling
-   ========================================================================== */
+/* Galaxy Link Computers - Clean & Honest Design System */
 
 :root {
   --primary: #1E90FF;
@@ -9,11 +6,9 @@
   --primary-light: #4FA3FF;
   --white: #ffffff;
   --soft-bg: #F8FAFB;
-  --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
   --gray-200: #E5E7EB;
   --gray-300: #D1D5DB;
-  --gray-600: #4B5563;
   --gray-700: #374151;
   --gray-900: #111827;
   --text-primary: #1F2937;
@@ -26,15 +21,11 @@
   --transition: all 0.2s ease;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 19px; /* Increased from 16px */
 }
 
 body {
@@ -45,9 +36,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION - Simple and clean
-   ========================================================================== */
+/* HEADER & NAVIGATION */
 header {
   position: sticky;
   top: 0;
@@ -57,11 +46,7 @@ header {
   box-shadow: var(--shadow-sm);
 }
 
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
 .nav {
   display: flex;
@@ -74,27 +59,23 @@ header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--gray-900);
 }
 
-.logo-image {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+.logo-text {
+  font-family: 'Sevillana', cursive;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
 }
 
-.logo-icon {
-  color: var(--primary);
-  font-size: 1.8rem;
-}
+.logo-image { width: 50px; height: 50px; object-fit: contain; }
+.logo-icon { color: var(--primary); font-size: 2.2rem; }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
+nav { display: flex; align-items: center; gap: 2rem; }
 
 nav a {
   text-decoration: none;
@@ -104,9 +85,7 @@ nav a {
   transition: var(--transition);
 }
 
-nav a:hover {
-  color: var(--primary);
-}
+nav a:hover { color: var(--primary); }
 
 .nav-cta {
   background: var(--primary);
@@ -115,13 +94,43 @@ nav a:hover {
   border-radius: var(--border-radius);
 }
 
-.nav-cta:hover {
-  background: var(--primary-dark);
+.nav-cta:hover { background: var(--primary-dark); }
+
+/* Dropdown Menu */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn { cursor: pointer; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--white);
+  min-width: 220px;
+  box-shadow: var(--shadow-md);
+  z-index: 1;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-200);
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
 }
 
-/* ==========================================================================
-   HERO CAROUSEL - Simplified, less dramatic
-   ========================================================================== */
+.dropdown-content a {
+  color: var(--text-primary);
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--soft-bg);
+  color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content { display: block; }
+
+/* HERO CAROUSEL */
 .hero-carousel {
   position: relative;
   width: 100%;
@@ -144,14 +153,8 @@ nav a:hover {
   position: relative;
 }
 
-.hero-slide-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-text {
-  max-width: 700px;
-}
+.hero-slide-content { position: relative; z-index: 1; }
+.hero-text { max-width: 700px; }
 
 .hero-text h1 {
   font-size: 2.5rem;
@@ -194,17 +197,9 @@ nav a:hover {
   font-size: 1.5rem;
 }
 
-.hero-arrow:hover {
-  background: var(--white);
-}
-
-.hero-arrow.prev {
-  left: 1rem;
-}
-
-.hero-arrow.next {
-  right: 1rem;
-}
+.hero-arrow:hover { background: var(--white); }
+.hero-arrow.prev { left: 1rem; }
+.hero-arrow.next { right: 1rem; }
 
 .hero-dots {
   position: absolute;
@@ -226,14 +221,9 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.hero-dot.active {
-  background: var(--white);
-  width: 10px;
-}
+.hero-dot.active { background: var(--white); }
 
-/* ==========================================================================
-   BUTTONS - Simple and functional
-   ========================================================================== */
+/* BUTTONS */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -252,9 +242,7 @@ nav a:hover {
   color: var(--white);
 }
 
-.btn-primary:hover {
-  background: var(--primary-dark);
-}
+.btn-primary:hover { background: var(--primary-dark); }
 
 .btn-product {
   width: 100%;
@@ -263,16 +251,10 @@ nav a:hover {
   margin-top: 1rem;
 }
 
-.btn-product:hover {
-  background: var(--primary-dark);
-}
+.btn-product:hover { background: var(--primary-dark); }
 
-/* ==========================================================================
-   SECTIONS - Clean layout
-   ========================================================================== */
-section {
-  padding: 5rem 0;
-}
+/* SECTIONS */
+section { padding: 5rem 0; }
 
 .section-title {
   font-size: 2rem;
@@ -292,13 +274,9 @@ section {
   margin-right: auto;
 }
 
-.alt-bg {
-  background: var(--soft-bg);
-}
+.alt-bg { background: var(--soft-bg); }
 
-/* ==========================================================================
-   PRODUCT CATEGORIES - Simple grid
-   ========================================================================== */
+/* PRODUCT CATEGORIES */
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -334,10 +312,7 @@ section {
   color: var(--primary);
 }
 
-.category-icon svg {
-  width: 28px;
-  height: 28px;
-}
+.category-icon svg { width: 28px; height: 28px; }
 
 .category-card h3 {
   font-size: 1.25rem;
@@ -346,14 +321,9 @@ section {
   color: var(--gray-900);
 }
 
-.category-card p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
+.category-card p { color: var(--text-secondary); font-size: 0.9rem; }
 
-/* ==========================================================================
-   FEATURED PRODUCTS - Clean, honest product cards
-   ========================================================================== */
+/* FEATURED PRODUCTS */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -369,9 +339,7 @@ section {
   transition: var(--transition);
 }
 
-.product-card:hover {
-  box-shadow: var(--shadow);
-}
+.product-card:hover { box-shadow: var(--shadow); }
 
 .product-image {
   position: relative;
@@ -382,11 +350,7 @@ section {
   border-bottom: 1px solid var(--gray-200);
 }
 
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.product-image img { width: 100%; height: 100%; object-fit: cover; }
 
 .product-badge {
   position: absolute;
@@ -400,9 +364,7 @@ section {
   font-weight: 600;
 }
 
-.product-info {
-  padding: 1.5rem;
-}
+.product-info { padding: 1.5rem; }
 
 .product-info h3 {
   font-size: 1.125rem;
@@ -430,9 +392,7 @@ section {
   border-bottom: 1px solid var(--gray-100);
 }
 
-.product-specs li:last-child {
-  border-bottom: none;
-}
+.product-specs li:last-child { border-bottom: none; }
 
 .product-specs li::before {
   content: '•';
@@ -441,9 +401,7 @@ section {
   margin-right: 0.5rem;
 }
 
-/* ==========================================================================
-   SERVICES - Professional and straightforward
-   ========================================================================== */
+/* SERVICES */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -477,10 +435,7 @@ section {
   color: var(--primary);
 }
 
-.service-icon svg {
-  width: 24px;
-  height: 24px;
-}
+.service-icon svg { width: 24px; height: 24px; }
 
 .service-card h3 {
   font-size: 1.25rem;
@@ -495,9 +450,7 @@ section {
   font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   BRANDS SECTION - Simple grid
-   ========================================================================== */
+/* BRANDS */
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -522,9 +475,7 @@ section {
   color: var(--primary);
 }
 
-/* ==========================================================================
-   WHY CHOOSE US - Clear value propositions
-   ========================================================================== */
+/* WHY CHOOSE US */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -541,9 +492,7 @@ section {
   border-left: 3px solid var(--primary);
 }
 
-.feature-box:hover {
-  box-shadow: var(--shadow);
-}
+.feature-box:hover { box-shadow: var(--shadow); }
 
 .feature-number {
   font-size: 2rem;
@@ -567,9 +516,7 @@ section {
   font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   CONTACT SECTION
-   ========================================================================== */
+/* CONTACT */
 .contact-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -618,10 +565,7 @@ section {
   flex-shrink: 0;
 }
 
-.contact-icon svg {
-  width: 22px;
-  height: 22px;
-}
+.contact-icon svg { width: 22px; height: 22px; }
 
 .contact-item h4 {
   font-size: 0.95rem;
@@ -630,10 +574,7 @@ section {
   color: var(--gray-900);
 }
 
-.contact-item p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-}
+.contact-item p { color: var(--text-secondary); font-size: 0.95rem; }
 
 .contact-form {
   background: var(--white);
@@ -672,18 +613,10 @@ section {
   border-color: var(--primary);
 }
 
-.contact-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
+.contact-form textarea { resize: vertical; min-height: 100px; }
+.contact-form select { cursor: pointer; }
 
-.contact-form select {
-  cursor: pointer;
-}
-
-/* ==========================================================================
-   FOOTER - Clean and informative
-   ========================================================================== */
+/* FOOTER */
 footer {
   background: var(--gray-900);
   color: var(--white);
@@ -711,13 +644,8 @@ footer {
   font-size: 0.9rem;
 }
 
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col ul li {
-  margin-bottom: 0.75rem;
-}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.75rem; }
 
 .footer-col ul li a {
   color: rgba(255, 255, 255, 0.7);
@@ -726,23 +654,26 @@ footer {
   font-size: 0.9rem;
 }
 
-.footer-col ul li a:hover {
-  color: var(--primary-light);
-}
+.footer-col ul li a:hover { color: var(--primary-light); }
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.footer-logo .logo-icon {
-  color: var(--primary-light);
-  font-size: 1.5rem;
+.footer-logo span:last-child {
+  font-family: 'Sevillana', cursive;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0.02em;
 }
+
+.footer-logo .logo-icon { color: var(--primary-light); font-size: 1.75rem; }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -756,85 +687,129 @@ footer {
   margin: 0.5rem 0;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
+/* PAGE HEADERS */
+.page-header {
+  background: linear-gradient(135deg, #1E90FF 0%, #4FA3FF 100%);
+  padding: 4rem 0 3rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.page-header p {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* SERVICE OVERVIEW */
+.service-overview { padding: 5rem 0; }
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.overview-text h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.overview-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.overview-features .feature-item {
+  padding: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--primary);
+}
+
+.overview-features .feature-item h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.overview-features .feature-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* CTA SECTION */
+.cta-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--gray-900);
+}
+
+.cta-section p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-section .btn {
+  font-size: 1.05rem;
+  padding: 1rem 2.5rem;
+}
+
+/* RESPONSIVE */
 @media (max-width: 968px) {
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
+  .nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+  nav { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    margin-top: 0.5rem;
   }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .hero-carousel {
-    height: 350px;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-  }
-
-  .categories-grid,
-  .products-grid,
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .footer-columns {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
+  
+  .hero-carousel { height: 350px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text p { font-size: 1rem; }
+  .section-title { font-size: 1.75rem; }
+  .page-header h1 { font-size: 2rem; }
+  .overview-content { grid-template-columns: 1fr; gap: 2.5rem; }
+  .categories-grid, .products-grid, .services-grid { grid-template-columns: 1fr; }
+  .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-columns { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
 @media (max-width: 640px) {
-  .container {
-    padding: 0 1.25rem;
-  }
-
-  section {
-    padding: 3.5rem 0;
-  }
-
-  .hero-carousel {
-    height: 300px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-arrow {
-    display: none;
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-columns {
-    grid-template-columns: 1fr;
-  }
-
-  .brands-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .container { padding: 0 1.25rem; }
+  section { padding: 3.5rem 0; }
+  .hero-carousel { height: 300px; }
+  .hero-text h1 { font-size: 1.75rem; }
+  .hero-arrow { display: none; }
+  .products-grid { grid-template-columns: 1fr; }
+  .footer-columns { grid-template-columns: 1fr; }
+  .brands-grid { grid-template-columns: repeat(2, 1fr); }
 }

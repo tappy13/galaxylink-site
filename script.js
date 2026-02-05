@@ -1,18 +1,10 @@
-// =============================================================================
-// GalaxyLink Computers - Simple & Functional Interactions
-// =============================================================================
+// Galaxy Link Computers - JavaScript Functionality
 
-// =============================================================================
-// HERO CAROUSEL FUNCTIONALITY
-// =============================================================================
-
+// HERO CAROUSEL
 let heroIndex = 0;
 const totalHeroSlides = 3;
 let heroAutoplayInterval;
 
-/**
- * Updates hero carousel position
- */
 function updateHeroCarousel() {
   const container = document.querySelector('.hero-carousel-container');
   const dots = document.querySelectorAll('.hero-dot');
@@ -24,61 +16,41 @@ function updateHeroCarousel() {
   });
 }
 
-/**
- * Moves hero carousel by direction
- * @param {number} direction - Direction to move (-1 or 1)
- */
 function moveHeroSlide(direction) {
   heroIndex = (heroIndex + direction + totalHeroSlides) % totalHeroSlides;
   updateHeroCarousel();
   resetHeroAutoplay();
 }
 
-/**
- * Jumps to specific hero slide
- * @param {number} index - Slide index (0-2)
- */
 function goToHeroSlide(index) {
   heroIndex = index;
   updateHeroCarousel();
   resetHeroAutoplay();
 }
 
-/**
- * Auto-advances hero carousel
- */
 function heroAutoplay() {
   heroIndex = (heroIndex + 1) % totalHeroSlides;
   updateHeroCarousel();
 }
 
-/**
- * Starts hero autoplay
- */
 function startHeroAutoplay() {
   heroAutoplayInterval = setInterval(heroAutoplay, 5000);
 }
 
-/**
- * Resets hero autoplay
- */
 function resetHeroAutoplay() {
   clearInterval(heroAutoplayInterval);
   startHeroAutoplay();
 }
 
-// Initialize hero carousel
+// Initialize carousel
 startHeroAutoplay();
 
-// Pause hero carousel on hover
+// Pause on hover
 const heroCarousel = document.querySelector('.hero-carousel');
 heroCarousel.addEventListener('mouseenter', () => clearInterval(heroAutoplayInterval));
 heroCarousel.addEventListener('mouseleave', startHeroAutoplay);
 
-// =============================================================================
 // SMOOTH SCROLLING
-// =============================================================================
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -98,20 +70,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// =============================================================================
-// PRODUCT CARDS - REQUEST QUOTE FUNCTIONALITY
-// =============================================================================
-
+// PRODUCT QUOTE BUTTONS
 document.querySelectorAll('.btn-product').forEach(button => {
   button.addEventListener('click', function() {
     const productCard = this.closest('.product-card');
     const productName = productCard.querySelector('h3').textContent;
     
-    // Scroll to contact form
     const contactSection = document.querySelector('#contact');
     contactSection.scrollIntoView({ behavior: 'smooth' });
     
-    // Pre-fill product info in form
     setTimeout(() => {
       const textarea = document.querySelector('.contact-form textarea');
       if (textarea && !textarea.value) {
@@ -122,24 +89,15 @@ document.querySelectorAll('.btn-product').forEach(button => {
   });
 });
 
-// =============================================================================
-// CATEGORY CARDS - CLICK FUNCTIONALITY
-// =============================================================================
-
+// CATEGORY CARDS
 document.querySelectorAll('.category-card').forEach(card => {
   card.addEventListener('click', function() {
-    const categoryName = this.querySelector('h3').textContent;
-    
-    // Scroll to products section
     const productsSection = document.querySelector('.featured-products');
     productsSection.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-// =============================================================================
 // CONTACT FORM SUBMISSION
-// =============================================================================
-
 const contactForm = document.querySelector('.contact-form');
 
 contactForm.addEventListener('submit', function(e) {
@@ -148,21 +106,17 @@ contactForm.addEventListener('submit', function(e) {
   const submitBtn = this.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
   
-  // Show loading state
   submitBtn.textContent = 'Sending...';
   submitBtn.disabled = true;
   
   // Simulate form submission
-  // In production: fetch('/api/contact', { method: 'POST', body: formData })
-  setTimeout(() => {
-    // Show success state
+  setTimeout(() {
     submitBtn.textContent = '✓ Inquiry Sent!';
     submitBtn.style.background = '#10b981';
     
-    // Clear form
     this.reset();
     
-    // Show success message
+    // Success notification
     const successMessage = document.createElement('div');
     successMessage.style.cssText = `
       position: fixed;
@@ -179,12 +133,10 @@ contactForm.addEventListener('submit', function(e) {
     successMessage.textContent = 'Thank you! We\'ll contact you shortly.';
     document.body.appendChild(successMessage);
     
-    // Remove success message after 5 seconds
     setTimeout(() => {
       successMessage.remove();
     }, 5000);
     
-    // Reset button after 3 seconds
     setTimeout(() => {
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
@@ -193,10 +145,7 @@ contactForm.addEventListener('submit', function(e) {
   }, 1500);
 });
 
-// =============================================================================
 // HEADER SCROLL EFFECT
-// =============================================================================
-
 let lastScroll = 0;
 const header = document.querySelector('header');
 
@@ -212,11 +161,7 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 
-// =============================================================================
-// BACK TO TOP BUTTON (Optional Enhancement)
-// =============================================================================
-
-// Create back to top button
+// BACK TO TOP BUTTON
 const backToTopBtn = document.createElement('button');
 backToTopBtn.innerHTML = '↑';
 backToTopBtn.style.cssText = `
@@ -240,7 +185,6 @@ backToTopBtn.style.cssText = `
 
 document.body.appendChild(backToTopBtn);
 
-// Show/hide back to top button
 window.addEventListener('scroll', () => {
   if (window.pageYOffset > 500) {
     backToTopBtn.style.display = 'block';
@@ -255,7 +199,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Back to top functionality
 backToTopBtn.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
@@ -263,13 +206,5 @@ backToTopBtn.addEventListener('click', () => {
   });
 });
 
-// =============================================================================
-// CONSOLE LOG - WEBSITE LOADED
-// =============================================================================
-
-console.log('%cGalaxyLink Computers', 'color: #1E90FF; font-size: 20px; font-weight: bold;');
+console.log('%cGalaxy Link Computers', 'color: #1E90FF; font-size: 20px; font-weight: bold;');
 console.log('%cWebsite loaded successfully!', 'color: #10b981; font-size: 14px;');
-
-// =============================================================================
-// END OF SCRIPT
-// =============================================================================
