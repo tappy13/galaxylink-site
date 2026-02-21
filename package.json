@@ -1,0 +1,20 @@
+{
+  "name": "galaxy-link-computers",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Galaxy Link Computers - E-commerce website with admin panel and database",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "nodemon api-server.js",
+    "old-server": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
