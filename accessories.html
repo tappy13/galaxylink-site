@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -46,6 +51,28 @@
   </div>
 </header>
 
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <h1>Computer Accessories & Parts</h1>
@@ -59,7 +86,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80" alt="Wireless Keyboard Mouse">
+          <img src="uploads/images/Logitech MK270 Wireless Combo.PNG" alt="Logitech MK270 Wireless Combo">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -79,7 +106,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=400&q=80" alt="External SSD">
+          <img src="uploads/images/Samsung T7 Portable SSD.PNG" alt="Samsung T7 Portable SSD">
         </div>
         <div class="product-info">
           <h3>Samsung T7 Portable SSD</h3>
@@ -98,7 +125,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&q=80" alt="Monitor">
+          <img src="uploads/images/Dell P2422H 24 Monitor.PNG" alt="Dell P2422H 24 Monitor">
         </div>
         <div class="product-info">
           <h3>Dell P2422H 24" Monitor</h3>
@@ -117,7 +144,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="UPS">
+          <img src="uploads/images/APC Back-UPS 650VA.PNG" alt="APC Back-UPS 650VA">
           <div class="product-badge">Essential</div>
         </div>
         <div class="product-info">
@@ -137,7 +164,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="Webcam">
+          <img src="uploads/images/Logitech C920 HD Pro Webcam.PNG" alt="Logitech C920 HD Pro Webcam">
         </div>
         <div class="product-info">
           <h3>Logitech C920 HD Pro Webcam</h3>
@@ -156,7 +183,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=80" alt="USB Hub">
+          <img src="uploads/images/Anker 10-Port USB 3.0 Hub.PNG" alt="Anker 10-Port USB 3.0 Hub">
         </div>
         <div class="product-info">
           <h3>Anker 10-Port USB 3.0 Hub</h3>
@@ -175,7 +202,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80" alt="Headset">
+          <img src="uploads/images/Jabra Evolve 40 UC Headset.PNG" alt="Jabra Evolve 40 UC Headset">
         </div>
         <div class="product-info">
           <h3>Jabra Evolve 40 UC Headset</h3>
@@ -194,7 +221,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=400&q=80" alt="RAM Memory">
+          <img src="uploads/images/Crucial 16GB DDR4 RAM.PNG" alt="Crucial 16GB DDR4 RAM">
         </div>
         <div class="product-info">
           <h3>Crucial 16GB DDR4 RAM</h3>
@@ -213,7 +240,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1585792180666-f7347c490ee2?w=400&q=80" alt="Network Cable">
+          <img src="uploads/images/CAT 6 CABLE.PNG" alt="Cat6 Ethernet Cable">
         </div>
         <div class="product-info">
           <h3>Cat6 Ethernet Cable Box</h3>
@@ -232,7 +259,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Toner Cartridge">
+          <img src="uploads/images/HP 26A Black Toner (CF226A).PNG" alt="HP 26A Black Toner">
         </div>
         <div class="product-info">
           <h3>HP 26A Black Toner (CF226A)</h3>
@@ -251,7 +278,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="Docking Station">
+          <img src="uploads/images/Dell WD19 Docking Station.png" alt="Dell WD19 Docking Station">
         </div>
         <div class="product-info">
           <h3>Dell WD19 Docking Station</h3>
@@ -270,7 +297,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&q=80" alt="Laptop Bag">
+          <img src="uploads/images/Targus Corporate Traveler Bag.PNG" alt="Targus Laptop Bag">
         </div>
         <div class="product-info">
           <h3>Targus Corporate Traveler Bag</h3>
@@ -332,10 +359,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4821262e27082f292429303124212623662b2766232d">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#452c2b232a05222429243d3c292c2b2e262a283530312037366b262a6b2e20"><span class="__cf_email__" data-cfemail="60090e060f2007010c0118190c090e0b030f0d1015140512134e030f4e0b05">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

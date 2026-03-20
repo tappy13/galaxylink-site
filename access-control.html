@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -45,6 +50,28 @@
     </nav>
   </div>
 </header>
+
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
 
 <section class="page-header">
   <div class="container">
@@ -164,7 +191,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&q=80" alt="Biometric Scanner">
+          <img src="uploads/images/ZKTeco Fingerprint Time Attendance.PNG" alt="ZKTeco Fingerprint Time Attendance">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -184,7 +211,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1585128721757-f0c76d52d22f?w=400&q=80" alt="Facial Recognition">
+          <img src="uploads/images/Hikvision Facial Recognition Terminal.PNG" alt="Hikvision Facial Recognition Terminal">
         </div>
         <div class="product-info">
           <h3>Hikvision Facial Recognition Terminal</h3>
@@ -203,7 +230,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Smart Lock">
+          <img src="uploads/images/Yale Smart Lock Digital.PNG" alt="Yale Smart Lock Digital">
           <div class="product-badge">New</div>
         </div>
         <div class="product-info">
@@ -223,7 +250,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&q=80" alt="Card Reader">
+          <img src="uploads/images/Suprema BioEntry W2.PNG" alt="Suprema BioEntry W2">
         </div>
         <div class="product-info">
           <h3>Suprema BioEntry W2</h3>
@@ -242,7 +269,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80" alt="Access Controller">
+          <img src="uploads/images/Access Control Panel 4-Door.PNG" alt="Access Control Panel 4-Door">
         </div>
         <div class="product-info">
           <h3>Access Control Panel 4-Door</h3>
@@ -261,7 +288,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=400&q=80" alt="Turnstile">
+          <img src="uploads/images/Tripod Turnstile Gate.PNG" alt="Tripod Turnstile Gate">
         </div>
         <div class="product-info">
           <h3>Tripod Turnstile Gate</h3>
@@ -323,17 +350,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f59c9b939ab5929499948d8c999c9b9edb969adb9e90">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#157c7b737a55727479746d6c797c7b7e767a786560617067663b767a3b7e70"><span class="__cf_email__" data-cfemail="c8a1a6aea788afa9a4a9b0b1a4a1a6a3aba7a5b8bdbcadbabbe6aba7e6a3ad">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>Connecting Kenya to smarter IT solutions</p>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>

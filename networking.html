@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -46,6 +51,28 @@
   </div>
 </header>
 
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <h1>Networking Equipment</h1>
@@ -59,7 +86,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Cisco Switch">
+          <img src="uploads/images/Cisco Catalyst 9300-48P.PNG" alt="Cisco Catalyst 9300-48P">
           <div class="product-badge">Enterprise</div>
         </div>
         <div class="product-info">
@@ -79,7 +106,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Ubiquiti Router">
+          <img src="uploads/images/Ubiquiti UniFi Dream Machine Pro.PNG" alt="Ubiquiti UniFi Dream Machine Pro">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -99,7 +126,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="MikroTik Router">
+          <img src="uploads/images/MikroTik CCR2004-16G-2S+.PNG" alt="MikroTik CCR2004-16G-2S+">
         </div>
         <div class="product-info">
           <h3>MikroTik CCR2004-16G-2S+</h3>
@@ -118,7 +145,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="TP-Link Switch">
+          <img src="uploads/images/TP-Link TL-SG3428XMP.PNG" alt="TP-Link TL-SG3428XMP">
         </div>
         <div class="product-info">
           <h3>TP-Link TL-SG3428XMP</h3>
@@ -137,7 +164,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="FortiGate Firewall">
+          <img src="uploads/images/Fortinet FortiGate 60F.PNG" alt="Fortinet FortiGate 60F">
         </div>
         <div class="product-info">
           <h3>Fortinet FortiGate 60F</h3>
@@ -156,7 +183,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="WiFi Access Point">
+          <img src="uploads/images/Ubiquiti UniFi 6 Pro AP.PNG" alt="Ubiquiti UniFi 6 Pro AP">
         </div>
         <div class="product-info">
           <h3>Ubiquiti UniFi 6 Pro AP</h3>
@@ -175,10 +202,10 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="HPE Aruba">
+          <img src="uploads/images/HPE Aruba 2530-48G Switch.png" alt="HPE Aruba 2530-48G Switch">
         </div>
         <div class="product-info">
-          <h3>HPE Aruba 2530-48G Switch</h3>
+          <h3>HP Aruba 2530-48G Switch</h3>
           <p>48-Port Managed Switch</p>
           <ul class="product-specs">
             <li>48x Gigabit Ports</li>
@@ -194,7 +221,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Network Cable">
+          <img src="uploads/images/D-Link DGS-1510-28P.png" alt="D-Link DGS-1510-28P">
         </div>
         <div class="product-info">
           <h3>D-Link DGS-1510-28P</h3>
@@ -213,7 +240,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="Wireless Controller">
+          <img src="uploads/images/Ruckus ZoneDirector 1200.PNG" alt="Ruckus ZoneDirector 1200">
         </div>
         <div class="product-info">
           <h3>Ruckus ZoneDirector 1200</h3>
@@ -275,10 +302,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2940474f46694e484548515045404742074a4607424c">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#afc6c1c9c0efc8cec3ced7d6c3c6c1c4ccc0c2dfdadbcadddc81ccc081c4ca"><span class="__cf_email__" data-cfemail="4b22252d240b2c2a272a3332272225202824263b3e3f2e393865282465202e">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

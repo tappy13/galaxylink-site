@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -46,6 +51,28 @@
   </div>
 </header>
 
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <h1>Laptops & Desktops</h1>
@@ -59,7 +86,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Dell Latitude">
+          <img src="uploads/images/Dell AIO.PNG" alt="Dell Latitude 5420">
           <div class="product-badge">Business</div>
         </div>
         <div class="product-info">
@@ -79,7 +106,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400&q=80" alt="HP EliteBook">
+          <img src="uploads/images/HP Elitebook 840 g11.jpg" alt="HP EliteBook 840 G8">
         </div>
         <div class="product-info">
           <h3>HP EliteBook 840 G8</h3>
@@ -98,7 +125,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&q=80" alt="Lenovo ThinkPad">
+          <img src="uploads/images/lenovo t14 gen6.PNG" alt="Lenovo ThinkPad T14">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -118,7 +145,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&q=80" alt="HP ProDesk">
+          <img src="uploads/images/hp prodesk 600 gen 6.PNG" alt="HP ProDesk 600 G6">
         </div>
         <div class="product-info">
           <h3>HP ProDesk 600 G6</h3>
@@ -137,7 +164,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?w=400&q=80" alt="Dell OptiPlex">
+          <img src="uploads/images/Dell AIO.PNG" alt="Dell OptiPlex 7090">
         </div>
         <div class="product-info">
           <h3>Dell OptiPlex 7090</h3>
@@ -156,7 +183,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80" alt="Lenovo ThinkCentre">
+          <img src="uploads/images/Lenovo ThinkCentre M90s Gen 6.PNG" alt="Lenovo ThinkCentre M720">
         </div>
         <div class="product-info">
           <h3>Lenovo ThinkCentre M720</h3>
@@ -218,17 +245,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91f8fff7fed1f6f0fdf0e9e8fdf8fffabff2febffaf4">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#71181f171e3116101d1009081d181f1a121e1c0104051403025f121e5f1a14"><span class="__cf_email__" data-cfemail="0d64636b624d6a6c616c7574616463666e62607d7879687f7e236e62236668">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>Connecting Kenya to smarter IT solutions</p>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>

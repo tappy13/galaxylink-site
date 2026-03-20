@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -45,6 +50,28 @@
     </nav>
   </div>
 </header>
+
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
 
 <section class="page-header">
   <div class="container">
@@ -167,7 +194,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" alt="POS Terminal">
+          <img src="uploads/images/Retail POS Complete Package All-in-One Retail Solution.PNG" alt="POS Thermal Printer">
           <div class="product-badge">Complete Kit</div>
         </div>
         <div class="product-info">
@@ -187,7 +214,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1587628604439-a12d2f8e8801?w=400&q=80" alt="Restaurant POS">
+          <img src="uploads/images/Restaurant POS System.PNG" alt="Restaurant POS System">
         </div>
         <div class="product-info">
           <h3>Restaurant POS System</h3>
@@ -206,7 +233,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Hotel PMS">
+          <img src="uploads/images/Hotel Management Suite.PNG" alt="Hotel Management System">
         </div>
         <div class="product-info">
           <h3>Hotel Management Suite</h3>
@@ -225,7 +252,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" alt="Salon Software">
+          <img src="uploads/images/Salon Management Package.PNG" alt="Salon Management System">
         </div>
         <div class="product-info">
           <h3>Salon Management Package</h3>
@@ -244,26 +271,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1587628604439-a12d2f8e8801?w=400&q=80" alt="Pharmacy POS">
-        </div>
-        <div class="product-info">
-          <h3>Pharmacy POS System</h3>
-          <p>Healthcare Retail Solution</p>
-          <ul class="product-specs">
-            <li>Medicine barcode scanning</li>
-            <li>Expiry date tracking</li>
-            <li>Prescription management</li>
-            <li>Insurance billing</li>
-            <li>Drug interaction alerts</li>
-            <li>Regulatory compliance</li>
-          </ul>
-          <button class="btn btn-product">Request Quote</button>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" alt="Supermarket POS">
+          <img src="uploads/images/Supermarket POS Solution.PNG" alt="Supermarket POS Solution">
         </div>
         <div class="product-info">
           <h3>Supermarket POS Solution</h3>
@@ -325,10 +333,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11787f777e5176707d7069687d787f7a3f727e3f7a74">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#acc5c2cac3eccbcdc0cdd4d5c0c5c2c7cfc3c1dcd9d8c9dedf82cfc382c7c9"><span class="__cf_email__" data-cfemail="036a6d656c4364626f627b7a6f6a6d68606c6e7376776671702d606c2d6866">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

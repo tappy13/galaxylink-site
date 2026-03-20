@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galaxy Link Computers | Kenya's Premier IT Solutions & Products Store</title>
+  <title>Galaxy Link Computers | Kenya's Premier ICT Solutions & Products Store</title>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +12,8 @@
   
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  <!-- Main script for carousel and UI interactions -->
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -25,34 +27,60 @@
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
     
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
         <a href="#products" class="dropbtn">Products ▾</a>
         <div class="dropdown-content">
-          <a href="laptops-desktops.html">Laptops & Desktops</a>
-          <a href="servers-storage.html">Servers & Storage</a>
-          <a href="printers-copiers.html">Printers & Copiers</a>
+          <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+          <a href="servers-storage.html">Servers &amp; Storage</a>
+          <a href="printers-copiers.html">Printers &amp; Copiers</a>
           <a href="networking.html">Networking Equipment</a>
-          <a href="cctv-security.html">CCTV & Security</a>
-          <a href="accessories.html">Accessories & Parts</a>
+          <a href="cctv-security.html">CCTV &amp; Security</a>
+          <a href="accessories.html">Accessories &amp; Parts</a>
         </div>
       </div>
       <div class="dropdown">
         <a href="#services" class="dropbtn">Services ▾</a>
         <div class="dropdown-content">
-          <a href="backup-cloud.html">Backup & Cloud Storage</a>
+          <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
           <a href="internet-management.html">Internet Management</a>
-          <a href="pos-pms.html">POS & PMS Software</a>
-          <a href="access-control.html">Access Control & Attendance</a>
+          <a href="pos-pms.html">POS &amp; PMS Software</a>
+          <a href="access-control.html">Access Control &amp; Attendance</a>
         </div>
       </div>
-      <a href="#brands">Brands</a>
+      
       <a href="#about">About</a>
       <a href="#contact" class="nav-cta">Contact Us</a>
     </nav>
   </div>
 </header>
+
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  
+  <a href="#about">About Us</a>
+  <a href="#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
 
 <!-- HERO BANNER CAROUSEL -->
 <div class="hero-carousel">
@@ -61,7 +89,7 @@
     <div class="hero-slide" style="background: linear-gradient(135deg, #1E90FF 0%, #4FA3FF 100%);">
       <div class="container hero-slide-content">
         <div class="hero-text">
-          <h1>Kenya's Premier IT Solutions Provider</h1>
+          <h1>Kenya's Premier ICT Solutions Provider</h1>
           <p>Computers, Laptops, Networking, CCTV & More</p>
           <a href="#products" class="btn btn-hero">Shop Now</a>
         </div>
@@ -90,13 +118,13 @@
     
   </div>
   
-  <button class="hero-arrow prev" onclick="moveHeroSlide(-1)">‹</button>
-  <button class="hero-arrow next" onclick="moveHeroSlide(1)">›</button>
+  <button class="hero-arrow prev">‹</button>
+  <button class="hero-arrow next">›</button>
   
   <div class="hero-dots">
-    <span class="hero-dot active" onclick="goToHeroSlide(0)"></span>
-    <span class="hero-dot" onclick="goToHeroSlide(1)"></span>
-    <span class="hero-dot" onclick="goToHeroSlide(2)"></span>
+    <span class="hero-dot active"></span>
+    <span class="hero-dot"></span>
+    <span class="hero-dot"></span>
   </div>
 </div>
 
@@ -108,7 +136,7 @@
     
     <div class="categories-grid">
       
-      <div class="category-card">
+      <a href="laptops-desktops.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
@@ -118,9 +146,9 @@
         </div>
         <h3>Laptops & Desktops</h3>
         <p>Business & Personal Computers</p>
-      </div>
+      </a>
       
-      <div class="category-card">
+      <a href="servers-storage.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
@@ -131,9 +159,9 @@
         </div>
         <h3>Servers & Storage</h3>
         <p>Enterprise Infrastructure</p>
-      </div>
+      </a>
       
-      <div class="category-card">
+      <a href="printers-copiers.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
@@ -143,9 +171,9 @@
         </div>
         <h3>Printers & Copiers</h3>
         <p>Office Printing Solutions</p>
-      </div>
+      </a>
       
-      <div class="category-card">
+      <a href="networking.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
@@ -155,9 +183,9 @@
         </div>
         <h3>Networking Equipment</h3>
         <p>Routers, Switches & Access Points</p>
-      </div>
+      </a>
       
-      <div class="category-card">
+      <a href="cctv-security.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
@@ -166,9 +194,9 @@
         </div>
         <h3>CCTV & Security</h3>
         <p>Surveillance Systems</p>
-      </div>
+      </a>
       
-      <div class="category-card">
+      <a href="accessories.html" class="category-card">
         <div class="category-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="9" cy="21" r="1"></circle>
@@ -178,7 +206,7 @@
         </div>
         <h3>Accessories & Parts</h3>
         <p>Cables, Adapters & Components</p>
-      </div>
+      </a>
       
     </div>
   </div>
@@ -194,7 +222,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Business Laptop">
+          <img src="uploads/images/Dell AIO.PNG" alt="Dell Latitude 5420">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -211,7 +239,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&q=80" alt="Desktop Computer">
+          <img src="uploads/images/hp prodesk 600 gen 6.PNG" alt="HP ProDesk 600 G6">
         </div>
         <div class="product-info">
           <h3>HP ProDesk 600 G6</h3>
@@ -227,7 +255,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Office Printer">
+          <img src="uploads/images/Canon imageRUNNER 2630i.PNG" alt="Canon imageRUNNER 2630i">
         </div>
         <div class="product-info">
           <h3>Canon imageRUNNER</h3>
@@ -243,7 +271,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Network Switch">
+          <img src="uploads/images/Cisco Catalyst 9300-48P.PNG" alt="Cisco Catalyst Switch">
           <div class="product-badge">Enterprise</div>
         </div>
         <div class="product-info">
@@ -260,7 +288,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="CCTV Camera">
+          <img src="uploads/images/Hikvision DS-2CD2143G0-I.PNG" alt="Hikvision IP Camera">
         </div>
         <div class="product-info">
           <h3>Hikvision IP Camera</h3>
@@ -276,7 +304,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="UPS System">
+          <img src="uploads/images/APC Smart-UPS 1500VA.PNG" alt="APC Smart-UPS 1500VA">
         </div>
         <div class="product-info">
           <h3>APC Smart-UPS</h3>
@@ -381,18 +409,86 @@
     <p class="section-subtitle">Partnering with world-leading technology manufacturers</p>
     
     <div class="brands-grid">
-      <div class="brand-item">Dell</div>
-      <div class="brand-item">HP</div>
-      <div class="brand-item">Lenovo</div>
-      <div class="brand-item">Cisco</div>
-      <div class="brand-item">Canon</div>
-      <div class="brand-item">Epson</div>
-      <div class="brand-item">Hikvision</div>
-      <div class="brand-item">TP-Link</div>
-      <div class="brand-item">Microsoft</div>
-      <div class="brand-item">APC</div>
-      <div class="brand-item">Ubiquiti</div>
-      <div class="brand-item">Samsung</div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Dell logo">
+          <img src="uploads/images/Dell-Logo.png" alt="Dell" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="HP logo">
+          <img src="uploads/images/HP_logo.png" alt="HP" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Lenovo logo">
+          <img src="uploads/images/Lenovo_Logo.png" alt="Lenovo" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Cisco logo">
+          <img src="uploads/images/Cisco_logo.png" alt="Cisco" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Canon logo">
+          <img src="uploads/images/canon_logo.png" alt="Canon" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Epson logo">
+          <img src="uploads/images/epson-logo.png" alt="Epson" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Hikvision logo">
+          <img src="uploads/images/hikvision_logo.png" alt="Hikvision" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="TP-Link logo">
+          <img src="uploads/images/tp-link-logo.png" alt="TP-Link" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Microsoft logo">
+          <img src="uploads/images/microsoft-logo.png" alt="Microsoft" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="APC logo">
+          <img src="uploads/images/APC-logo.PNG" alt="APC" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Ubiquiti logo">
+          <img src="uploads/images/ubiquiti-logo.png" alt="Ubiquiti" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Samsung logo">
+          <img src="uploads/images/samsung-logo-png.png" alt="Samsung" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Apple logo">
+          <img src="uploads/images/apple-logo.png" alt="Apple" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Huawei logo">
+          <img src="uploads/images/huawei-logo.png" alt="Huawei" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Intel logo">
+          <img src="uploads/images/intel-logo.png" alt="Intel" loading="lazy" />
+        </div>
+      </div>
+      <div class="brand-item">
+        <div class="brand-logo-holder" aria-label="Logitech logo">
+          <img src="uploads/images/logo-logitech.png" alt="Logitech" loading="lazy" />
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -490,7 +586,7 @@
             </div>
             <div>
               <h4>Email Us</h4>
-              <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58c8b838aa5828489849d9c898c8b8ecb868acb8e80">[email&#160;protected]</a></p>
+              <p><a href="/cdn-cgi/l/email-protection#137a7d757c5374727f726b6a7f7a7d78707c7e6366677661603d707c3d7876"><span class="__cf_email__" data-cfemail="cfa6a1a9a08fa8aea3aeb7b6a3a6a1a4aca0a2bfbabbaabdbce1aca0e1a4aa">[email&#160;protected]</span></a></p>
             </div>
           </div>
           
@@ -537,7 +633,7 @@
         <ul>
           <li><a href="#products">Products</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#brands">Brands</a></li>
+          <li></li>
           <li><a href="#about">About Us</a></li>
         </ul>
       </div>
@@ -557,10 +653,32 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e28b8c848da285838e839a9b8e8b8c89cc818dcc8987">[email&#160;protected]</a></li>
+          <li><a href="mailto:info@galaxylink.co.ke">info@galaxylink.co.ke</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="laptops-desktops.html">Laptops & Desktops</a></li>
+          <li><a href="networking.html">Networking Equipment</a></li>
+          <li><a href="cctv-security.html">CCTV & Security</a></li>
+          <li><a href="accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>Nairobi CBD, Kenya</li>
+          <li>+254 700 000 000</li>
+          <li><a href="/cdn-cgi/l/email-protection#3b52555d547b5c5a575a4342575255505854564b4e4f5e494815585415505e"><span class="__cf_email__" data-cfemail="345d5a525b74535558554c4d585d5a5f575b594441405146471a575b1a

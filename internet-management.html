@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -45,6 +50,28 @@
     </nav>
   </div>
 </header>
+
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
 
 <section class="page-header">
   <div class="container">
@@ -167,7 +194,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="MikroTik Router">
+          <img src="uploads/images/MikroTik CCR2004-16G-2S+.PNG" alt="MikroTik Router">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -187,7 +214,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=400&q=80" alt="Ubiquiti Gateway">
+          <img src="uploads/images/Ubiquiti UniFi Dream Machine Pro.PNG" alt="Ubiquiti UniFi Network">
         </div>
         <div class="product-info">
           <h3>Ubiquiti UniFi Network Package</h3>
@@ -206,10 +233,10 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&q=80" alt="Bandwidth Controller">
+          <img src="uploads/images/Fortinet FortiGate 60F.PNG" alt="Firewall Appliance">
         </div>
         <div class="product-info">
-          <h3>pfSense Firewall + Bandwidth Control</h3>
+          <h3>Fortinet FortiGate 60F Firewall + Bandwidth Control</h3>
           <p>Advanced Traffic Management</p>
           <ul class="product-specs">
             <li>Traffic shaping & QoS</li>
@@ -268,10 +295,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ff96919990bf989e939e878693969194d19c90d1949a">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#ec85828a83ac8b8d808d9495808582878f83819c9998899e9fc28f83c28789"><span class="__cf_email__" data-cfemail="c7aea9a1a887a0a6aba6bfbeabaea9aca4a8aab7b2b3a2b5b4e9a4a8e9aca2">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

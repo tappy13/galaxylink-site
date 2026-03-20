@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -46,6 +51,28 @@
   </div>
 </header>
 
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <h1>CCTV & Security Systems</h1>
@@ -59,7 +86,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="Hikvision IP Camera">
+          <img src="uploads/images/Hikvision DS-2CD2143G0-I.PNG" alt="Hikvision DS-2CD2143G0-I">
           <div class="product-badge">Best Seller</div>
         </div>
         <div class="product-info">
@@ -79,7 +106,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&q=80" alt="Dahua NVR">
+          <img src="uploads/images/Dahua NVR4216-16P-4KS2.PNG" alt="Dahua NVR4216-16P-4KS2">
         </div>
         <div class="product-info">
           <h3>Dahua NVR4216-16P-4KS2</h3>
@@ -98,7 +125,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="Bullet Camera">
+          <img src="uploads/images/Hikvision DS-2CE16D0T-IRF.PNG" alt="Hikvision DS-2CE16D0T-IRF">
           <div class="product-badge">Outdoor</div>
         </div>
         <div class="product-info">
@@ -118,7 +145,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&q=80" alt="PTZ Camera">
+          <img src="uploads/images/Dahua SD59230U-HNI.PNG" alt="Dahua SD59230U-HNI">
         </div>
         <div class="product-info">
           <h3>Dahua SD59230U-HNI</h3>
@@ -137,7 +164,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="WiFi Camera">
+          <img src="uploads/images/TP-Link Tapo C200.PNG" alt="TP-Link Tapo C200">
         </div>
         <div class="product-info">
           <h3>TP-Link Tapo C200</h3>
@@ -156,7 +183,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&q=80" alt="DVR System">
+          <img src="uploads/images/Hikvision DS-7208HUHI-K1.PNG" alt="Hikvision DS-7208HUHI-K1">
         </div>
         <div class="product-info">
           <h3>Hikvision DS-7208HUHI-K1</h3>
@@ -175,7 +202,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="Thermal Camera">
+          <img src="uploads/images/Hikvision DS-2TD2617B Thermal.PNG" alt="Hikvision Thermal Camera">
         </div>
         <div class="product-info">
           <h3>Hikvision DS-2TD2617B-6/PA</h3>
@@ -194,7 +221,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?w=400&q=80" alt="Video Intercom">
+          <img src="uploads/images/Dahua VTO2202F-P Video Intercom.png" alt="Dahua VTO2202F-P Video Intercom">
         </div>
         <div class="product-info">
           <h3>Dahua VTO2202F-P Video Intercom</h3>
@@ -213,7 +240,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=400&q=80" alt="Alarm System">
+          <img src="uploads/images/Paradox MG5050 Alarm Panel.PNG" alt="Paradox MG5050 Alarm Panel">
         </div>
         <div class="product-info">
           <h3>Paradox MG5050 Alarm Panel</h3>
@@ -275,10 +302,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7beb9b1b897b0b6bbb6afaebbbeb9bcf9b4b8f9bcb2">[email&#160;protected]</a></li>
+          <li><a href="mailto:info@galaxylink.co.ke">info@galaxylink.co.ke</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

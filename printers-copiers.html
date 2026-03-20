@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -46,6 +51,28 @@
   </div>
 </header>
 
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
+
 <section class="page-header">
   <div class="container">
     <h1>Printers & Copiers</h1>
@@ -59,7 +86,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="HP LaserJet">
+          <img src="uploads/images/hp-laserjet-pro-m404dn.png" alt="HP LaserJet Pro M404dn">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -79,7 +106,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=80" alt="Canon Multifunction">
+          <img src="uploads/images/Canon imageRUNNER 2630i.PNG" alt="Canon imageRUNNER 2630i">
         </div>
         <div class="product-info">
           <h3>Canon imageRUNNER 2630i</h3>
@@ -98,7 +125,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Epson EcoTank">
+          <img src="uploads/images/Epson EcoTank L6290.PNG" alt="Epson EcoTank L6290">
           <div class="product-badge">Eco-Friendly</div>
         </div>
         <div class="product-info">
@@ -118,7 +145,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=80" alt="Xerox WorkCentre">
+          <img src="uploads/images/Xerox WorkCentre 3345DNI.PNG" alt="Xerox WorkCentre 3345DNI">
         </div>
         <div class="product-info">
           <h3>Xerox WorkCentre 3345DNI</h3>
@@ -137,7 +164,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="HP Color LaserJet">
+          <img src="uploads/images/HP Color LaserJet Pro M479fdw.png" alt="HP Color LaserJet Pro M479fdw">
         </div>
         <div class="product-info">
           <h3>HP Color LaserJet Pro M479fdw</h3>
@@ -156,7 +183,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=80" alt="Brother MFC">
+          <img src="uploads/images/Brother MFC-L8900CDW.png" alt="Brother MFC-L8900CDW">
         </div>
         <div class="product-info">
           <h3>Brother MFC-L8900CDW</h3>
@@ -175,7 +202,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Ricoh Copier">
+          <img src="uploads/images/Ricoh IM 430F.PNG" alt="Ricoh IM 430F">
         </div>
         <div class="product-info">
           <h3>Ricoh IM 430F</h3>
@@ -194,7 +221,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=400&q=80" alt="Konica Minolta">
+          <img src="uploads/images/Konica Minolta bizhub 287.PNG" alt="Konica Minolta bizhub 287">
         </div>
         <div class="product-info">
           <h3>Konica Minolta bizhub 287</h3>
@@ -213,7 +240,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&q=80" alt="Thermal Printer">
+          <img src="uploads/images/Zebra ZD421 Thermal Printer.PNG" alt="Zebra ZD421 Thermal Printer">
         </div>
         <div class="product-info">
           <h3>Zebra ZD421 Thermal Printer</h3>
@@ -275,10 +302,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9a0a7afa689aea8a5a8b1b0a5a0a7a2e7aaa6e7a2ac">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#b3daddd5dcf3d4d2dfd2cbcadfdaddd8d0dcdec3c6c7d6c1c09dd0dc9dd8d6"><span class="__cf_email__" data-cfemail="7d14131b123d1a1c111c0504111413161e12100d0809180f0e531e12531618">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>C
+    </div>
+  </div>
+</footer>
+</body>
+</html>

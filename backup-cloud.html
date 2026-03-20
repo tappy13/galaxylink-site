@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,10 @@
       <span class="logo-icon">◆</span>
       <span class="logo-text">Galaxy Link Computers</span>
     </div>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
@@ -45,6 +50,28 @@
     </nav>
   </div>
 </header>
+
+<!-- MOBILE NAVIGATION OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <div class="mobile-section-label">Products</div>
+  <a href="laptops-desktops.html">Laptops &amp; Desktops</a>
+  <a href="servers-storage.html">Servers &amp; Storage</a>
+  <a href="printers-copiers.html">Printers &amp; Copiers</a>
+  <a href="networking.html">Networking Equipment</a>
+  <a href="cctv-security.html">CCTV &amp; Security</a>
+  <a href="accessories.html">Accessories &amp; Parts</a>
+  <div class="mobile-section-label">Services</div>
+  <a href="backup-cloud.html">Backup &amp; Cloud Storage</a>
+  <a href="internet-management.html">Internet Management</a>
+  <a href="pos-pms.html">POS &amp; PMS Software</a>
+  <a href="access-control.html">Access Control &amp; Attendance</a>
+  <div class="mobile-section-label">Info</div>
+  <a href="index.html#brands">Brands</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#contact" class="mobile-nav-cta">Contact Us</a>
+</nav>
 
 <section class="page-header">
   <div class="container">
@@ -164,7 +191,7 @@
       
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=400&q=80" alt="Synology NAS">
+          <img src="uploads/images/Synology DiskStation NAS.png" alt="Synology DiskStation NAS">
         </div>
         <div class="product-info">
           <h3>Synology DiskStation NAS</h3>
@@ -182,7 +209,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=400&q=80" alt="External Drive">
+          <img src="uploads/images/WD My Book Duo.PNG" alt="WD My Book Duo">
           <div class="product-badge">Popular</div>
         </div>
         <div class="product-info">
@@ -201,7 +228,7 @@
 
       <div class="product-card">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400&q=80" alt="Backup UPS">
+          <img src="uploads/images/APC Smart-UPS 1500VA.PNG" alt="APC Smart-UPS 1500VA">
         </div>
         <div class="product-info">
           <h3>APC Smart-UPS with Battery Backup</h3>
@@ -262,17 +289,14 @@
         <ul>
           <li>Nairobi CBD, Kenya</li>
           <li>+254 700 000 000</li>
-          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6cfc8c0c9e6c1c7cac7dedfcacfc8cd88c5c988cdc3">[email&#160;protected]</a></li>
+          <li><a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0c7c1ccc1d8d9ccc9cecbc3cfcdd0d5d4c5d2d38ec3cf8ecbc5"><span class="__cf_email__" data-cfemail="1a73747c755a7d7b767b6263767374717975776a6f6e7f686934797534717f">[email&#160;protected]</span></a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>© 2026 Galaxy Link Computers. All rights reserved.</p>
-      <p>Connecting Kenya to smarter IT solutions</p>
     </div>
   </div>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>
